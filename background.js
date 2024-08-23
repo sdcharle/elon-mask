@@ -6,13 +6,12 @@ chrome.action.onClicked.addListener((tab) => {
     // Update the icon to reflect the enabled/disabled state
     chrome.action.setIcon({
         path: {
-            "16": isEnabled ? "icons8-car-16.png" : "icons8-poop-16.png",
-            "48": isEnabled ? "icons8-car-48.png" : "icons8-poop-48.png",
-            "128": isEnabled ? "icons8-car-128.png" : "icons8-poop-128.png"
+            "16": isEnabled ? "w-icons8-car-16.png" : "icons8-car-16.png",
+            "48": isEnabled ? "w-icons8-car-48.png" : "icons8-car-48.png",
+            "128": isEnabled ? "w-icons8-car-128.png" : "icons8-car-128.png"
         }
     });
     
-
     // Send a message to the content script to enable/disable it
     chrome.tabs.sendMessage(tab.id, { action: isEnabled ? "enable" : "disable" });
 });
