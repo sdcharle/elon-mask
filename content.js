@@ -37,7 +37,7 @@ function replaceSources(sources) {
 }
 
 function maskElonImages() {
-    const regex = /elon/gi;
+    const regex = /\belon\b/gi;
 
     const images = Array.from(document.getElementsByTagName('img')).filter(img => 
         [...img.attributes].some(attr => regex.test(attr.value))
@@ -51,7 +51,7 @@ function maskElonImages() {
 }
 
 function maskElonContent() {
-    const regex = /elon/gi;
+    const regex = /\belon\b/gi;
 
     const elements = document.body.getElementsByTagName('*');
     for (let element of elements) {

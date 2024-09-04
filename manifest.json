@@ -3,7 +3,7 @@
     "name": "Elon Mask",
     "version": "1.0",
     "description": "Replaces text blocks containing the word 'Elon' with a black box.",
-    "permissions": ["activeTab", "scripting"],
+    "permissions": ["activeTab"],
     "background": {
       "service_worker": "background.js"
     },
